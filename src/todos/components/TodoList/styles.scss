@@ -1,0 +1,77 @@
+@import "../../../styles/colors";
+@import "../../../styles/mediaQueries";
+
+.todos-list {
+  padding: 20px;
+
+  input.search {
+    border-radius: 15px;
+    outline: none;
+    padding: 5px 10px;
+    border-style: none;
+    border: 1px solid $gray-color;
+  }
+
+  .columns {
+    padding: 0 5px;
+    background-color: rgb(204, 204, 204);
+  }
+
+  .id,
+  .title,
+  .priority,
+  .isDone,
+  .date {
+    display: inline-block;
+    padding-right: 5px;
+    vertical-align: middle;
+  }
+
+  .id {
+    width: 5%;
+  }
+
+  .title {
+    width: 25%;
+  }
+
+  .priority {
+    width: 15%;
+  }
+  .isDone {
+    width: 10%;
+  }
+
+  .date {
+    width: 23%;
+    word-break: break-all;
+  }
+}
+
+@include mobile {
+  .todos-list {
+    padding: 10px;
+    margin-top: 10px;
+    .columns {
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.view-list {
+  //width: 70%;
+  margin: 3rem auto;
+  padding: 1rem 3rem;
+  border: 1px solid grey;
+  border-radius: 0.3rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-shadow: 0.5rem 0.5rem 0.25rem 0px rgba(0, 0, 0, 0.75);
+}

@@ -1,26 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
+
+//Import the modified App.css
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// Import the Routes component, which contains our Route setup
 
+import { Routes } from './Routes'
+
+
+// Provider component is a react-redux component for setting up the Redux Store
+
+import { Provider } from 'react-redux'
+
+// Import the ConfigureStore that holds the initial Configuration
+
+import { configureStore } from './store/configureStore'
+
+// Create a Store from the Configuration, we can pass a Initial State here
+const store = configureStore()
+
+const App = (props) => {
+  return (
+      <Provider store={store} >
+        <Routes />
+      </Provider>
+  )
+}
 export default App;
