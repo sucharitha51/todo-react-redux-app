@@ -27,7 +27,7 @@ const Todo = ({ info }) => {
   )}
 
   return (
-    <div className='todo'>
+    <div className='todo' style={{ 'backgroundColor' : isDone? 'rgb(232,251,240)':''}}>
       <p className='title'>{title}</p>
       <p className='priority'>{priority}</p>
       <p className='date' >{createdAt}</p>
