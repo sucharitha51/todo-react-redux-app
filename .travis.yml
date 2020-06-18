@@ -15,7 +15,7 @@ script:
   - preact build
 
 after_success:
-  - firebase deploy --token "1//031g_NlqY1Fy5CgYIARAAGAMSNwF-L9IrVvMDrkNE4f8_-sw1VDeWYEp1SETsUg8x5-2NHnM0nN8N4hhBgD5VrQP-Uc6DAaUw6UY" --non-interactive
+  - firebase deploy --token $FIREBASE_TOKEN --non-interactive
 
 notifications:
   email:
