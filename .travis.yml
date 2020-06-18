@@ -1,11 +1,7 @@
-language: node_js
+deploy:
+  provider: firebase
+  token:
+    secure: "1//03-QNNbGE7BquCgYIARAAGAMSNwF-L9Irdv1wWhDXLK1uuU6MEh9fZpeWIecEby1qI9FsTfR37BTfq6_NZ7DFh7Rdcgu0SqRCQTs"
 
-node_js: 
-  - stable
-  
-  
-install:
-  - npm install
 
-script:
-  - npm start
+  
